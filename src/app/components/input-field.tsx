@@ -5,15 +5,17 @@ import React from 'react';
 
 export interface InputFieldProps {
   label?: string;
-  // id?: string;
+  id?: string;
+  placeholder?: string;
+  name?: string;
+  type?: string;
 }
 
 export default function InputField({ label, id, ...rest }: InputFieldProps) {
   return (
     <div className="flex flex-col">
       {label && (
-        <label htmlFor={id} className="mb-2 text-base color-gray-900">
-          {/* text-gray-900? */}
+        <label htmlFor={id} className="mb-2 text-base text-gray-900">
           {label}
         </label>
       )}
