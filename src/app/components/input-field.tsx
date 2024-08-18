@@ -9,9 +9,19 @@ export interface InputFieldProps {
   placeholder?: string;
   name?: string;
   type?: string;
+  children?: React.ReactNode;
+  required?: boolean;
+  as?: string;
 }
 
-export default function InputField({ label, id, ...rest }: InputFieldProps) {
+export default function InputField({
+  label,
+  required,
+  children,
+  as,
+  id,
+  ...rest
+}: InputFieldProps) {
   return (
     <div className="flex flex-col">
       {label && (
